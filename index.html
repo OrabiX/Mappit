@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mappit - Interactive World Map</title>
+  
+  <!-- Local stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+<body>
+  <!-- Header with logo and language menu -->
+  <header id="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Mappit logo" class="logo-img" />
+    </div>
+    <div class="language-wrapper">
+      <button id="language-selector" aria-label="Language selector" aria-haspopup="true" aria-expanded="false">
+        <img src="images/globe.png" alt="Change language" class="icon" />
+      </button>
+      <div id="language-options" aria-label="Language options" aria-hidden="true">
+        <button class="language-option" data-language="en" lang="en" aria-label="Change language to English">English</button>
+        <button class="language-option" data-language="es" lang="es" aria-label="Change language to Spanish">español</button>
+        <button class="language-option" data-language="fr" lang="fr" aria-label="Change language to French">français</button>
+        <button class="language-option" data-language="zh" lang="zh" aria-label="Change language to Chinese">中国人</button>
+        <button class="language-option" data-language="ar" lang="ar" aria-label="Change language to Arabic">العربية</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Map container -->
+  <main id="map" class="map-container" aria-label="Interactive world map"></main>
+
+  <!-- Language change announcement -->
+  <div id="language-announcement" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
